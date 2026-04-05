@@ -159,31 +159,6 @@ The IP Core uses **two separate AXI4 Master ports** (`gmem0` and `gmem1`) to acc
 
 ---
 
-## 📁 Project Structure
-
-```
-project/
-├── Python/
-│   ├── train.py               # Model training (TensorFlow/Keras)
-│   └── export_weights.py      # Export weights for Py2C
-├── Py2C_new/
-│   ├── CNN.cpp                # Auto-generated C++ from Py2C
-│   ├── CNN.h
-│   └── CNN_tb.cpp             # C-simulation testbench (50 MNIST images)
-├── HLS/
-│   ├── CNN_opt.cpp            # Manually optimized C++ with HLS pragmas
-│   ├── CNN_opt.h
-│   └── hls_config.tcl         # Vitis HLS project script
-├── Vivado/
-│   └── block_design/          # SoC block design (IP Core + AXI interconnect)
-├── Vitis_SW/
-│   ├── main.c                 # Bare-metal inference application
-│   └── test_data.h            # 1,000 MNIST test images (Fixed-point format)
-└── README.md
-```
-
----
-
 ## 🚀 Getting Started
 
 **Requirements:**
